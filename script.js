@@ -11,7 +11,7 @@ const subnav = document.querySelector(".subnav");
 const pageOrder = ["overview", "research", "evidence-page", "product", "sources-page"];
 
 function wrapHeadingWords() {
-  document.querySelectorAll("h1, h2").forEach(heading => {
+  document.querySelectorAll("main h1, main h2").forEach(heading => {
     if (heading.dataset.wordsReady) return;
     const words = heading.textContent.trim().split(/(\s+)/);
     heading.textContent = "";
@@ -146,7 +146,7 @@ dots.forEach(dot => {
 
 pageTabs.forEach(tab => {
   tab.addEventListener("click", () => {
-    setActivePage(tab.dataset.pageTarget);
+    setActivePage(tab.dataset.pageTarget, tab.dataset.sectionTarget);
     mobileNav.hidden = true;
     menuButton?.setAttribute("aria-expanded", "false");
   });
@@ -206,6 +206,10 @@ mobileNav?.addEventListener("click", event => {
   setActivePage(button.dataset.pageTarget);
   mobileNav.hidden = true;
   menuButton?.setAttribute("aria-expanded", "false");
+});
+
+document.querySelector(".newsletter-form")?.addEventListener("submit", event => {
+  event.preventDefault();
 });
 
 const initialSection = location.hash.replace("#", "");
