@@ -1,6 +1,6 @@
 # CosmosIntelligence Website
 
-Static interactive website package.
+Static interactive website package .
 
 ## Run locally
 
