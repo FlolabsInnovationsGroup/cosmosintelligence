@@ -20,9 +20,15 @@ jobs:
           echo "::error title=Force push detected::'${{ github.actor }}' force-pushed to ${{ github.ref_name }}. Force pushes are how PolinRider spreads. Check this branch and tell Mohamed."
           exit 1
 
-      - uses: actions/checkout@v5
-        with:
-          persist-credentials: false
+      # Plain git fetch instead of actions/checkout: no third-party action, no submodules, no stored credentials.
+      - name: Fetch code
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          git init -q .
+          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$TOKEN" | base64 -w0)" \
+            fetch -q --depth 1 --no-recurse-submodules "${{ github.server_url }}/${{ github.repository }}" "${{ github.sha }}"
+          git checkout -q FETCH_HEAD
 
       - name: Scan for malware patterns
         shell: python3 {0}
