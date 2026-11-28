@@ -2,7 +2,7 @@
 title: "Evidence and Research Standards"
 slug: "/research/evidence-standards/"
 canonical: "https://www.cosmosintelligence.org/research/evidence-standards/"
-seo_title: "Evidence Standards | CosmosIntelligence AI Astronomy Research"
+seo_title: "Evidence Standards for AI Astronomy | CosmosIntelligence"
 meta_description: "See the evidence standards CosmosIntelligence uses for AI astronomy, anomaly detection, network research and extraordinary claims."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

@@ -2,7 +2,7 @@
 title: "Search for Life and Intelligence"
 slug: "/research/search-for-life-intelligence/"
 canonical: "https://www.cosmosintelligence.org/research/search-for-life-intelligence/"
-seo_title: "Search for Extraterrestrial Life and Intelligence | CosmosIntelligence"
+seo_title: "Extraterrestrial Life and Intelligence | CosmosIntelligence"
 meta_description: "CosmosIntelligence research into exoplanets, biosignatures, technosignatures, SETI, AI anomaly detection and future communication with other intelligence."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

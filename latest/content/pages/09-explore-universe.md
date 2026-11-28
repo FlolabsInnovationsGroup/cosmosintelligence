@@ -2,7 +2,7 @@
 title: "Explore the Universe with Space Buddy"
 slug: "/product/space-buddy/explore-universe/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/explore-universe/"
-seo_title: "Explore the Universe | Live Sky, 3D Space and Free Roam with Space Buddy"
+seo_title: "Explore the Universe with Space Buddy | Live Sky, 3D Space"
 meta_description: "Explore the Space Buddy live sky, planetary viewpoints, free roam universe navigation, object interaction and immersive visual interface."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

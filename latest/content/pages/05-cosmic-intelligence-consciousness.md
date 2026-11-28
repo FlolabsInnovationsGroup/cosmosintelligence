@@ -2,7 +2,7 @@
 title: "Cosmic Intelligence, Networks and Consciousness"
 slug: "/research/cosmic-intelligence-consciousness/"
 canonical: "https://www.cosmosintelligence.org/research/cosmic-intelligence-consciousness/"
-seo_title: "Cosmic Intelligence and Consciousness Research | CosmosIntelligence"
+seo_title: "Cosmic Intelligence and Consciousness | CosmosIntelligence"
 meta_description: "CosmosIntelligence research into the cosmic web, neural networks, information systems, complexity, intelligence and consciousness as testable questions."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

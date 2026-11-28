@@ -2,7 +2,7 @@
 title: "Sources and Evidence"
 slug: "/sources/"
 canonical: "https://www.cosmosintelligence.org/sources/"
-seo_title: "CosmosIntelligence Sources | NASA, JPL, Astronomy Archives and Research"
+seo_title: "Sources and Evidence | NASA, JPL and Astronomy Archives"
 meta_description: "Explore the primary sources behind CosmosIntelligence, including NASA, JPL, public astronomy archives, citizen science programs and peer reviewed research."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

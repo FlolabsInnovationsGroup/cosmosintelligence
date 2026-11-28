@@ -2,7 +2,7 @@
 title: "Demos"
 slug: "/demos/"
 canonical: "https://www.cosmosintelligence.org/demos/"
-seo_title: "CosmosIntelligence and Space Buddy Demos | NASA Eyes, AI, XR and Research"
+seo_title: "CosmosIntelligence Demos | NASA Eyes, AI, XR and Research"
 meta_description: "Explore planned Space Buddy demonstrations: NASA Eyes, guided tours, AI voice, XR prototypes and research visualizations."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

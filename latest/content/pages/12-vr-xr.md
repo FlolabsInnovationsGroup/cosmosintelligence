@@ -2,7 +2,7 @@
 title: "Space Buddy VR, AR and XR"
 slug: "/product/space-buddy/vr-xr/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/vr-xr/"
-seo_title: "Space Buddy VR and AR | Immersive Space Exploration with NASA 3D Assets"
+seo_title: "Space Buddy VR, AR and XR | Immersive Space Exploration"
 meta_description: "Explore the Space Buddy vision for VR, AR, WebXR, NASA 3D assets, spacecraft tours and immersive planetary exploration."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

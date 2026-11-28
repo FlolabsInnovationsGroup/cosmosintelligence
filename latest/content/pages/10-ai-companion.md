@@ -2,7 +2,7 @@
 title: "Space Buddy AI Companion and Memory"
 slug: "/product/space-buddy/ai-companion/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/ai-companion/"
-seo_title: "Space Buddy AI Companion | Voice, Memory, Guidance and Research"
+seo_title: "Space Buddy AI Companion | Voice, Memory and Guidance"
 meta_description: "Learn how the Space Buddy AI companion uses voice, memory, source grounding and FloBrain to guide exploration, research and personalized discovery."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

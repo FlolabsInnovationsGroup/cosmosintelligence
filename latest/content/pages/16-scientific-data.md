@@ -2,7 +2,7 @@
 title: "Scientific Data Connectors"
 slug: "/product/space-buddy/integrations/scientific-data/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/integrations/scientific-data/"
-seo_title: "Space Buddy Scientific Data | JPL Horizons, Exoplanets and Astronomy Archives"
+seo_title: "Space Buddy Scientific Data | JPL Horizons and Exoplanets"
 meta_description: "Learn how Space Buddy can connect to JPL Horizons, the NASA Exoplanet Archive and public astronomy archives for grounded scientific answers."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

@@ -2,7 +2,7 @@
 title: "Research Notes"
 slug: "/research-notes/"
 canonical: "https://www.cosmosintelligence.org/research-notes/"
-seo_title: "CosmosIntelligence Research Notes | AI Astronomy Experiments and Findings"
+seo_title: "CosmosIntelligence Research Notes | AI Astronomy Findings"
 meta_description: "Explore planned CosmosIntelligence research topics and publication standards for astronomy data, AI experiments, integration tests and findings."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

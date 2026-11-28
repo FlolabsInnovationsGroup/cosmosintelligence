@@ -2,7 +2,7 @@
 title: "The Cosmic Graph"
 slug: "/research/cosmic-graph/"
 canonical: "https://www.cosmosintelligence.org/research/cosmic-graph/"
-seo_title: "The Cosmic Graph | Mapping Astronomical Objects, Signals and Evidence"
+seo_title: "The Cosmic Graph | Mapping Astronomical Objects and Signals"
 meta_description: "How CosmosIntelligence plans to link astronomical objects, signals, observations, datasets, papers, events and anomalies in a machine readable Cosmic Graph."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

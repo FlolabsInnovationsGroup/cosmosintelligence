@@ -2,7 +2,7 @@
 title: "CosmosIntelligence Research"
 slug: "/research/"
 canonical: "https://www.cosmosintelligence.org/research/"
-seo_title: "CosmosIntelligence Research | AI Astronomy, Cosmic Graph and Discovery"
+seo_title: "CosmosIntelligence Research | AI Astronomy and Cosmic Graph"
 meta_description: "CosmosIntelligence research into cosmic mapping, AI astronomy, the Cosmic Graph, anomalies, life, intelligence, information networks and scientific evidence."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

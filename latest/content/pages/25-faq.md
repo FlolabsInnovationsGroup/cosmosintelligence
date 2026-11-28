@@ -2,7 +2,7 @@
 title: "FAQ"
 slug: "/faq/"
 canonical: "https://www.cosmosintelligence.org/faq/"
-seo_title: "CosmosIntelligence and Space Buddy FAQ | Research, NASA Integrations and Participation"
+seo_title: "CosmosIntelligence and Space Buddy FAQ | NASA Integrations"
 meta_description: "Answers to common questions about CosmosIntelligence, Space Buddy, NASA Eyes, citizen science, AI astronomy, research, community features and contributors."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

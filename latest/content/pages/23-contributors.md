@@ -2,7 +2,7 @@
 title: "Contributors"
 slug: "/contributors/"
 canonical: "https://www.cosmosintelligence.org/contributors/"
-seo_title: "CosmosIntelligence Contributors | Research, Product and Community"
+seo_title: "CosmosIntelligence Contributors | Research and Community"
 meta_description: "Learn how CosmosIntelligence credits contributors across research, product, citizen science, business, content and community work."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

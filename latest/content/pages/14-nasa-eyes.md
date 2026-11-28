@@ -2,7 +2,7 @@
 title: "NASA Eyes Integration"
 slug: "/product/space-buddy/integrations/nasa-eyes/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/integrations/nasa-eyes/"
-seo_title: "NASA Eyes Integration with Space Buddy | Embeds, Deep Links and AI Guidance"
+seo_title: "NASA Eyes Integration with Space Buddy | AI Guidance"
 meta_description: "How Space Buddy can use documented NASA Eyes iframe embeds and deep links for conversational exploration of missions, planets, asteroids and exoplanets."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

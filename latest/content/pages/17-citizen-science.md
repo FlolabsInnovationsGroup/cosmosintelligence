@@ -2,7 +2,7 @@
 title: "Citizen Science"
 slug: "/citizen-science/"
 canonical: "https://www.cosmosintelligence.org/citizen-science/"
-seo_title: "Space Citizen Science | Explore, Observe, Analyze and Contribute"
+seo_title: "Space Citizen Science | Observe, Analyze and Contribute"
 meta_description: "Move from curiosity to real participation through CosmosIntelligence, Space Buddy and vetted citizen science programs such as NASA Exoplanet Watch."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

@@ -2,7 +2,7 @@
 title: "Planetary Maps and 3D"
 slug: "/product/space-buddy/integrations/planetary-maps-3d/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/integrations/planetary-maps-3d/"
-seo_title: "Planetary Maps and NASA 3D | Solar System Treks, AR and Space Buddy"
+seo_title: "Planetary Maps and NASA 3D | Solar System Treks and AR"
 meta_description: "See how Space Buddy can use Solar System Treks, planetary map services, NASA 3D models, AR and WebXR for deeper surface exploration."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

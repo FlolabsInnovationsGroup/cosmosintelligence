@@ -2,7 +2,7 @@
 title: "Contributor Roles"
 slug: "/join/roles/"
 canonical: "https://www.cosmosintelligence.org/join/roles/"
-seo_title: "CosmosIntelligence Contributor Roles | Research, AI, Business, Marketing and More"
+seo_title: "CosmosIntelligence Contributor Roles | Research, AI and More"
 meta_description: "Explore technical and nontechnical CosmosIntelligence and Space Buddy roles in research, citizen science, business development, marketing and AI."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

@@ -2,7 +2,7 @@
 title: "Space Buddy Product Requirements and Build Map"
 slug: "/product/space-buddy/build-map/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/build-map/"
-seo_title: "Space Buddy Product Requirements and Public Build Map | CosmosIntelligence"
+seo_title: "Space Buddy Product Requirements and Public Build Map"
 meta_description: "Review the public Space Buddy product requirements, feature groups, NASA integrations, research work areas and contributor opportunities."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

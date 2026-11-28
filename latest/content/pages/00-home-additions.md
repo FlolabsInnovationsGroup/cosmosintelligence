@@ -2,7 +2,7 @@
 title: "CosmosIntelligence"
 slug: "/"
 canonical: "https://www.cosmosintelligence.org/"
-seo_title: "CosmosIntelligence | AI Research, Space Exploration and Space Buddy"
+seo_title: "CosmosIntelligence | AI Research and Space Exploration"
 meta_description: "Explore CosmosIntelligence research, Space Buddy, cosmic mapping, AI astronomy, citizen science and ways to contribute from anywhere in the world."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

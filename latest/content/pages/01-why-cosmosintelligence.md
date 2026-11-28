@@ -2,7 +2,7 @@
 title: "Why CosmosIntelligence Exists"
 slug: "/why-cosmosintelligence/"
 canonical: "https://www.cosmosintelligence.org/why-cosmosintelligence/"
-seo_title: "Why CosmosIntelligence Exists | Bringing the Cosmos to Everyone"
+seo_title: "Why CosmosIntelligence | Bringing the Cosmos to Everyone"
 meta_description: "CosmosIntelligence aims to bring the cosmos within reach of every human through AI, scientific data, exploration, citizen science and meaningful participation."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

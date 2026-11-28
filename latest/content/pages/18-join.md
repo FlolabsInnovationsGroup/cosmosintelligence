@@ -2,7 +2,7 @@
 title: "Build With Us"
 slug: "/join/"
 canonical: "https://www.cosmosintelligence.org/join/"
-seo_title: "Build CosmosIntelligence and Space Buddy With Us | Global Contributor Project"
+seo_title: "Build With Us | CosmosIntelligence Contributor Project"
 meta_description: "Join CosmosIntelligence and contribute to Space Buddy, AI astronomy, research, citizen science, business development, marketing, partnerships and more."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"

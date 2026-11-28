@@ -2,7 +2,7 @@
 title: "Space Buddy Integrations"
 slug: "/product/space-buddy/integrations/"
 canonical: "https://www.cosmosintelligence.org/product/space-buddy/integrations/"
-seo_title: "Space Buddy Integrations | NASA Eyes, Treks, Data APIs, XR and Citizen Science"
+seo_title: "Space Buddy Integrations | NASA Eyes, Treks, Data and XR"
 meta_description: "See the NASA, JPL and science resources Space Buddy can connect to, including Eyes, Solar System Treks, 3D models, exoplanet data and citizen science."
 last_reviewed: "2026-09-12"
 author: "CosmosIntelligence Research and Product Team"
