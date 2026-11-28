@@ -1,5 +1,5 @@
 ---
-title: "CosmosIntelligence Home Page Additions"
+title: "CosmosIntelligence"
 slug: "/"
 canonical: "https://www.cosmosintelligence.org/"
 seo_title: "CosmosIntelligence | AI Research, Space Exploration and Space Buddy"

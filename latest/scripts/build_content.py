@@ -69,19 +69,89 @@ def read_page(path):
     meta = dict((k, json.loads(v.strip())) for k, v in (line.split(':', 1) for line in front.strip().splitlines()))
     return meta, body.strip()
 
-def metadata(meta):
+OG_IMAGE = ORIGIN + '/assets/og-cosmosintelligence.jpg'
+OG_IMAGE_ALT = 'Andromeda galaxy: CosmosIntelligence AI research and Space Buddy'
+ORG_DESCRIPTION = 'Cosmos Intelligence is an AI research and product initiative exploring cosmic data, hidden structures, anomalies, and space intelligence through open science, education, and interactive tools.'
+GSC_VERIFICATION = '42Wkd2C2hHkUfuKlR0dzd7wJsztNDu3xlmEr03Al8-0'
+# Short breadcrumb names: top-level nav labels win over the dropdown labels.
+LABELS = {**dict(RESEARCH), **dict(BUDDY), **dict(TOP)}
+SITE = {'titles': {}, 'home_description': ''}
+
+def plain(text):
+    """Markdown answer text as plain text, without link-only lines."""
+    lines = [l.strip() for l in text.strip().splitlines()]
+    lines = [l for l in lines if l and not re.fullmatch(r'(\[[^\]]+\]\([^)]+\)\s*)+', l)]
+    text = ' '.join(re.sub(r'^(\* |\d+\. |### )', '', l) for l in lines)
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text).replace('**', '')
+    return re.sub(r'\s+', ' ', text).strip()
+
+def schema_graph(meta, faq=None):
+    slug = meta['slug']
+    url = ORIGIN + slug
+    org_id, site_id = ORIGIN + '/#organization', ORIGIN + '/#website'
+    image = {'@type': 'ImageObject', 'url': OG_IMAGE, 'width': 1200, 'height': 630}
+    types = [t.strip() for t in meta.get('schema_types', '').split(',')]
+    page_type = 'FAQPage' if faq else 'CollectionPage' if 'CollectionPage' in types else 'WebPage'
+    page = {'@type': page_type, '@id': url, 'url': url, 'name': meta['title'], 'description': meta['meta_description'], 'isPartOf': {'@id': site_id}, 'publisher': {'@id': org_id}, 'inLanguage': 'en', 'primaryImageOfPage': image}
+    if meta.get('last_reviewed'):
+        page['dateModified'] = meta['last_reviewed']
+    if meta.get('primary_entities'):
+        page['about'] = [{'@type': 'Thing', 'name': n.strip()} for n in meta['primary_entities'].split(',') if n.strip()]
+    graph = [page]
+    article = next((t for t in types if t in ('Article', 'TechArticle')), None)
+    if article and not faq:
+        node = {'@type': article, '@id': url + '#article', 'headline': meta['title'], 'description': meta['meta_description'], 'mainEntityOfPage': {'@id': url}, 'isPartOf': {'@id': url}, 'publisher': {'@id': org_id}, 'inLanguage': 'en', 'image': OG_IMAGE}
+        if meta.get('author'):
+            node['author'] = {'@type': 'Organization', 'name': meta['author'], 'url': ORIGIN + '/contributors/', 'parentOrganization': {'@id': org_id}}
+        if meta.get('last_reviewed'):
+            node['dateModified'] = meta['last_reviewed']
+        graph.append(node)
+        page['mainEntity'] = {'@id': url + '#article'}
+    if faq:
+        page['mainEntity'] = [{'@type': 'Question', 'name': q.strip(), 'acceptedAnswer': {'@type': 'Answer', 'text': plain(a)}} for q, a in faq]
+    graph.append({'@type': 'Organization', '@id': org_id, 'name': 'CosmosIntelligence', 'alternateName': 'Cosmos Intelligence', 'url': ORIGIN + '/', 'description': ORG_DESCRIPTION,
+                  'parentOrganization': {'@type': 'Organization', 'name': 'FloLabs Innovations Group', 'url': 'https://www.flolabsinnovations.com/',
+                                         'logo': {'@type': 'ImageObject', 'url': ORIGIN + '/assets/flolabs-logo.webp', 'width': 90, 'height': 88},
+                                         'sameAs': ['https://www.youtube.com/@flolabsinnovation', 'https://www.linkedin.com/company/flolabs-innovation/']}})
+    graph.append({'@type': 'WebSite', '@id': site_id, 'name': 'CosmosIntelligence', 'url': ORIGIN + '/', 'description': SITE['home_description'], 'inLanguage': 'en', 'publisher': {'@id': org_id}})
+    if slug != '/':
+        crumbs = [('Home', ORIGIN + '/')]
+        parts = slug.strip('/').split('/')
+        for i in range(1, len(parts)):
+            parent = '/' + '/'.join(parts[:i]) + '/'
+            if parent in SITE['titles']:
+                crumbs.append((LABELS.get(parent, SITE['titles'][parent]), ORIGIN + parent))
+        crumbs.append((meta['title'], url))
+        graph.append({'@type': 'BreadcrumbList', '@id': url + '#breadcrumb', 'itemListElement': [{'@type': 'ListItem', 'position': i, 'name': n, 'item': u} for i, (n, u) in enumerate(crumbs, 1)]})
+        page['breadcrumb'] = {'@id': url + '#breadcrumb'}
+    return graph
+
+def metadata(meta, faq=None):
     url = ORIGIN + meta['slug']
-    graph = [{'@type': 'WebPage', '@id': url, 'url': url, 'name': meta['title'], 'description': meta['meta_description'], 'isPartOf': {'@id': ORIGIN + '/#website'}}]
-    if meta['slug'] == '/':
-        graph.extend([{'@type': 'Organization', '@id': ORIGIN + '/#organization', 'name': 'CosmosIntelligence', 'url': ORIGIN + '/'}, {'@type': 'WebSite', '@id': ORIGIN + '/#website', 'name': 'CosmosIntelligence', 'url': ORIGIN + '/', 'publisher': {'@id': ORIGIN + '/#organization'}}])
-    else:
-        graph.append({'@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': ORIGIN + '/'}, {'@type': 'ListItem', 'position': 2, 'name': meta['title'], 'item': url}]})
+    graph = schema_graph(meta, faq)
+    verification = f'\n    <meta name="google-site-verification" content="{GSC_VERIFICATION}">' if meta['slug'] == '/' else ''
+    title, description = esc(meta['seo_title'], quote=True), esc(meta['meta_description'], quote=True)
+    # Escape '<' as a JSON unicode escape so values decode back unchanged.
+    ld = json.dumps({'@context': 'https://schema.org', '@graph': graph}).replace('<', '\\u003c')
     return f'''<title>{esc(meta['seo_title'])}</title>
-    <meta name="description" content="{esc(meta['meta_description'], quote=True)}">
-    <link rel="canonical" href="{url}">
-    <meta property="og:type" content="website"><meta property="og:title" content="{esc(meta['seo_title'], quote=True)}">
-    <meta property="og:description" content="{esc(meta['meta_description'], quote=True)}"><meta property="og:url" content="{url}">
-    <script type="application/ld+json">{json.dumps({'@context': 'https://schema.org', '@graph': graph}).replace('<', '&lt;')}</script>'''
+    <meta name="description" content="{description}">
+    <link rel="canonical" href="{url}">{verification}
+    <meta property="og:type" content="website"><meta property="og:title" content="{title}">
+    <meta property="og:description" content="{description}"><meta property="og:url" content="{url}">
+    <meta property="og:site_name" content="CosmosIntelligence"><meta property="og:locale" content="en_US">
+    <meta property="og:image" content="{OG_IMAGE}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(OG_IMAGE_ALT, quote=True)}">
+    <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{description}">
+    <meta name="twitter:image" content="{OG_IMAGE}"><meta name="twitter:image:alt" content="{esc(OG_IMAGE_ALT, quote=True)}">
+    <script type="application/ld+json">{ld}</script>'''
+
+LLMS_SECTIONS = [('Research', ('/why-cosmosintelligence/', '/research')), ('Space Buddy', ('/product/', '/demos/')), ('Participate', ('/citizen-science/', '/join/', '/contributors/')), ('Reference', ('/faq/', '/sources/'))]
+
+def llms_txt(pages):
+    out = ['# CosmosIntelligence', '', '> ' + SITE['home_description'] + ' ' + INDEPENDENCE, '', f'- [CosmosIntelligence home]({ORIGIN}/): {pages[0][0]["meta_description"]}' if pages[0][0]['slug'] == '/' else '']
+    for section, prefixes in LLMS_SECTIONS:
+        out += ['', f'## {section}', '']
+        out += [f'- [{m["title"]}]({ORIGIN}{m["slug"]}): {m["meta_description"]}' for m, _ in pages if m['slug'] != '/' and m['slug'].startswith(prefixes)]
+    return '\n'.join(out) + '\n'
 
 def panel(heading, text, image, section_id, hero=False, status=''):
     tag = 'h1' if hero else 'h2'
@@ -99,6 +169,8 @@ def main():
     footer = footer.replace('src="assets/', 'src="/assets/').replace('http://cosmosintelligence.org/', ORIGIN + '/')
     footer = footer.replace('<div class="footer-grid">', f'<p class="independence">{INDEPENDENCE}</p><div class="footer-grid">')
     pages = [read_page(p) for p in sorted((ROOT / 'content/pages').glob('*.md'))]
+    SITE['titles'] = {m['slug']: m['title'] for m, _ in pages}
+    SITE['home_description'] = next(m['meta_description'] for m, _ in pages if m['slug'] == '/')
     for meta, body in pages:
         slug = meta['slug']
         if slug == '/':
@@ -123,7 +195,7 @@ def main():
             for i in range(1, len(chunks), 2):
                 content += panel(chunks[i], chunks[i+1], image, f'section-{i}')
             page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-            {metadata(meta)}
+            {metadata(meta, list(zip(chunks[1::2], chunks[2::2])) if slug == '/faq/' else None)}
             <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="/styles.css"></head><body class="knowledge-page">{header(slug)}
@@ -144,9 +216,10 @@ def main():
         destination = ROOT / slug.lstrip('/') / 'index.html'
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(page)
-    (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(f'<url><loc>{ORIGIN}{m["slug"]}</loc></url>' for m, _ in pages) + '\n</urlset>\n')
+    (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(f'<url><loc>{ORIGIN}{m["slug"]}</loc><lastmod>{m["last_reviewed"]}</lastmod></url>' for m, _ in pages) + '\n</urlset>\n')
     (ROOT / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: ' + ORIGIN + '/sitemap.xml\n')
-    print(f'Built {len(pages)} static pages and sitemap.')
+    (ROOT / 'llms.txt').write_text(llms_txt(pages))
+    print(f'Built {len(pages)} static pages, sitemap and llms.txt.')
 
 if __name__ == '__main__':
     main()

@@ -51,9 +51,15 @@ for path, page in pages.items():
 home = (ROOT/'index.html').read_text()
 original = (ROOT/'templates/home.html').read_text()
 assert set(re.findall(r'data-section="([^"]+)"', original)) <= set(re.findall(r'data-section="([^"]+)"', home))
-assert len(paths) == 26
-assert len(ET.parse(ROOT/'sitemap.xml').getroot()) == 26
+slugs = {json.loads(l.split(':', 1)[1]) for p in (ROOT/'content/pages').glob('*.md') for l in p.read_text().splitlines() if l.startswith('slug:')}
+assert len(paths) == len(slugs)
+NS = '{http://www.sitemaps.org/schemas/sitemap/0.9}'
+sitemap = ET.parse(ROOT/'sitemap.xml').getroot()
+locs = [u.findtext(NS + 'loc') for u in sitemap]
+assert len(locs) == len(set(locs)) and {urlsplit(l).path for l in locs} == slugs, 'sitemap URLs must match content/pages slugs'
+assert all(re.fullmatch(r'\d{4}-\d{2}-\d{2}', u.findtext(NS + 'lastmod') or '') for u in sitemap), 'sitemap lastmod missing'
+assert (ROOT/'llms.txt').exists()
 assert 'every patch of sky contains part of a galaxy' in (ROOT/'research/mapping-the-cosmos/index.html').read_text()
 assert 'What NASA supplies' in (ROOT/'product/space-buddy/integrations/nasa-eyes/index.html').read_text()
 if errors: raise SystemExit('\n'.join(errors))
-print('PASS: 26 pages, local links and assets, fragments, metadata, sitemap and original homepage sections.')
+print(f'PASS: {len(paths)} pages, local links and assets, fragments, metadata, sitemap and original homepage sections.')

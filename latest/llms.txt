@@ -1,0 +1,42 @@
+# CosmosIntelligence
+
+> Explore CosmosIntelligence research, Space Buddy, cosmic mapping, AI astronomy, citizen science and ways to contribute from anywhere in the world. CosmosIntelligence and Space Buddy are independent projects, not sponsored, endorsed or operated by NASA. NASA Eyes and other linked NASA resources are provided by NASA; using them does not imply a partnership.
+
+- [CosmosIntelligence home](https://www.cosmosintelligence.org/): Explore CosmosIntelligence research, Space Buddy, cosmic mapping, AI astronomy, citizen science and ways to contribute from anywhere in the world.
+
+## Research
+
+- [Why CosmosIntelligence Exists](https://www.cosmosintelligence.org/why-cosmosintelligence/): CosmosIntelligence aims to bring the cosmos within reach of every human through AI, scientific data, exploration, citizen science and meaningful participation.
+- [CosmosIntelligence Research](https://www.cosmosintelligence.org/research/): CosmosIntelligence research into cosmic mapping, AI astronomy, the Cosmic Graph, anomalies, life, intelligence, information networks and scientific evidence.
+- [Mapping the Cosmos](https://www.cosmosintelligence.org/research/mapping-the-cosmos/): How CosmosIntelligence uses AI, astronomical surveys and the Cosmic Graph to map objects, signals, observations and relationships across the Universe.
+- [The Cosmic Graph](https://www.cosmosintelligence.org/research/cosmic-graph/): How CosmosIntelligence plans to link astronomical objects, signals, observations, datasets, papers, events and anomalies in a machine readable Cosmic Graph.
+- [Cosmic Intelligence, Networks and Consciousness](https://www.cosmosintelligence.org/research/cosmic-intelligence-consciousness/): CosmosIntelligence research into the cosmic web, neural networks, information systems, complexity, intelligence and consciousness as testable questions.
+- [Search for Life and Intelligence](https://www.cosmosintelligence.org/research/search-for-life-intelligence/): CosmosIntelligence research into exoplanets, biosignatures, technosignatures, SETI, AI anomaly detection and future communication with other intelligence.
+- [Evidence and Research Standards](https://www.cosmosintelligence.org/research/evidence-standards/): See the evidence standards CosmosIntelligence uses for AI astronomy, anomaly detection, network research and extraordinary claims.
+- [Research Notes](https://www.cosmosintelligence.org/research-notes/): Explore planned CosmosIntelligence research topics and publication standards for astronomy data, AI experiments, integration tests and findings.
+
+## Space Buddy
+
+- [Space Buddy](https://www.cosmosintelligence.org/product/space-buddy/): Space Buddy is a conversational AI universe explorer connecting live sky views, NASA experiences, scientific data, XR, citizen science and community.
+- [Explore the Universe with Space Buddy](https://www.cosmosintelligence.org/product/space-buddy/explore-universe/): Explore the Space Buddy live sky, planetary viewpoints, free roam universe navigation, object interaction and immersive visual interface.
+- [Space Buddy AI Companion and Memory](https://www.cosmosintelligence.org/product/space-buddy/ai-companion/): Learn how the Space Buddy AI companion uses voice, memory, source grounding and FloBrain to guide exploration, research and personalized discovery.
+- [Space Buddy Community, News and Events](https://www.cosmosintelligence.org/product/space-buddy/community-news-events/): Explore the Space Buddy community universe, moderated space news feed, astrophotography, discussions, astronomy events and personalized recommendations.
+- [Space Buddy VR, AR and XR](https://www.cosmosintelligence.org/product/space-buddy/vr-xr/): Explore the Space Buddy vision for VR, AR, WebXR, NASA 3D assets, spacecraft tours and immersive planetary exploration.
+- [Space Buddy Integrations](https://www.cosmosintelligence.org/product/space-buddy/integrations/): See the NASA, JPL and science resources Space Buddy can connect to, including Eyes, Solar System Treks, 3D models, exoplanet data and citizen science.
+- [NASA Eyes Integration](https://www.cosmosintelligence.org/product/space-buddy/integrations/nasa-eyes/): How Space Buddy can use documented NASA Eyes iframe embeds and deep links for conversational exploration of missions, planets, asteroids and exoplanets.
+- [Planetary Maps and 3D](https://www.cosmosintelligence.org/product/space-buddy/integrations/planetary-maps-3d/): See how Space Buddy can use Solar System Treks, planetary map services, NASA 3D models, AR and WebXR for deeper surface exploration.
+- [Scientific Data Connectors](https://www.cosmosintelligence.org/product/space-buddy/integrations/scientific-data/): Learn how Space Buddy can connect to JPL Horizons, the NASA Exoplanet Archive and public astronomy archives for grounded scientific answers.
+- [Space Buddy Product Requirements and Build Map](https://www.cosmosintelligence.org/product/space-buddy/build-map/): Review the public Space Buddy product requirements, feature groups, NASA integrations, research work areas and contributor opportunities.
+- [Demos](https://www.cosmosintelligence.org/demos/): Explore planned Space Buddy demonstrations: NASA Eyes, guided tours, AI voice, XR prototypes and research visualizations.
+
+## Participate
+
+- [Citizen Science](https://www.cosmosintelligence.org/citizen-science/): Move from curiosity to real participation through CosmosIntelligence, Space Buddy and vetted citizen science programs such as NASA Exoplanet Watch.
+- [Build With Us](https://www.cosmosintelligence.org/join/): Join CosmosIntelligence and contribute to Space Buddy, AI astronomy, research, citizen science, business development, marketing, partnerships and more.
+- [Contributor Roles](https://www.cosmosintelligence.org/join/roles/): Explore technical and nontechnical CosmosIntelligence and Space Buddy roles in research, citizen science, business development, marketing and AI.
+- [Contributors](https://www.cosmosintelligence.org/contributors/): Learn how CosmosIntelligence credits contributors across research, product, citizen science, business, content and community work.
+
+## Reference
+
+- [Sources and Evidence](https://www.cosmosintelligence.org/sources/): Explore the primary sources behind CosmosIntelligence, including NASA, JPL, public astronomy archives, citizen science programs and peer reviewed research.
+- [FAQ](https://www.cosmosintelligence.org/faq/): Answers to common questions about CosmosIntelligence, Space Buddy, NASA Eyes, citizen science, AI astronomy, research, community features and contributors.
